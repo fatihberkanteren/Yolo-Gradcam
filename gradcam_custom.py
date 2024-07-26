@@ -100,7 +100,7 @@ cv2.putText(output, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 2
 
 rf = Roboflow(api_key="YOUR_API_KEY")
 project = rf.workspace().project("dataset")
-yolo_model = project.version("verison").model
+yolo_model = project.version("version").model
 yolo_predictions = yolo_model.predict(img, confidence=40, overlap=30).json()
 
 yolo_output = draw_yolo_predictions(orig.copy() ,yolo_predictions)
